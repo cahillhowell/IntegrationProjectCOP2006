@@ -31,5 +31,11 @@ public class comments {
 This works too, both are easy
 
 */
+	
+//	To Define variables, they are ways to store a value, there are
+//	many different types that hold certain kinds of values
+//  
+//  To define scope, it is the naming of a variable, its what you
+//	would use to call upon a variable you create or ask for
 	}
 }
