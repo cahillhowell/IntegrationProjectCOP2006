@@ -23,6 +23,10 @@ public class main {
 		
 		System.out.println("This is a workout randomizer!");
 		System.out.println(" ");
+		System.out.println("Is working out cool?");
+		boolean workoutsAreCool = true;
+		System.out.println(workoutsAreCool);
+		System.out.println(" ");
 		System.out.println("Let's start by asking a few questons.");
 
 		System.out.println("What is your name? Please answer First Last.");
