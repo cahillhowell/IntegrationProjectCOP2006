@@ -1,69 +1,72 @@
-import java.util.Scanner;
-
+// This is my drastic attempt to recreate my integration project and turn in on time as well
+// as attempting to implement the ideas into my actual full size project
 /*
- * Programmer - Cahill Howell Date Started - 5/18/2020 Version 1.10.7 Version Key -
- * Major.Minor.Micro
+ * Programmer - Cahill Howell Date Started 5/18/2020
  * 
- * This program is designed to be a work-out program that has a multitude of work-outs to do. The
- * program will function as hopefully an interactive form to get random work-outs, grouped by
- * similar structures, like arms, legs, core, etc. It will ask the user what type of grouping they
- * want to try, then it will ask the intensity like, easy, medium, or hard. Then it will pick
- * through that library of work-outs and output like 5-6 different ones along with reasonable
- * amounts of reps or timing for that work-out.
+ * This will be all the desired features asked for through the sprints and milestones I will relate
+ * this back into my actual project as I lost my project on my Laptop since its Graphic's card
+ * stopped working this morning. Please enjoy running my program!
  * 
- * Good luck and have fun!
  */
-
-
-
 public class main {
-  public static void main(String[] args) {
 
-    System.out.println("This is a workout randomizer!");
-    System.out.println(" ");
-    System.out.println("Is working out cool?");
-    boolean workoutsAreCool = true;
-    System.out.println(workoutsAreCool);
-    System.out.println(" ");
-    System.out.println("Let's start by asking a few questons.");
+  public static void main(String[] args) throws InterruptedException {
+    String skipLine = "\n"; // string to skiplines in code, even though System.out.println(" ")
+                            // works too, string may be
+                            // more efficient
 
-    System.out.println("What is your name? Please answer First Last.");
-    Scanner scan = new Scanner(System.in);
-    String name = scan.next();
-    System.out.println(" ");
+    String greeting = "Welcome to my integration project! This will contain all of the things I am " // Greet
+                                                                                                     // the
+                                                                                                     // user
+        + "learning to use inside java, some things"
+        + "\nwill be interactive, feel free to go along with it!";
 
-    System.out.println("How tall are you? Please answer in inches.");
-    Scanner scan1 = new Scanner(System.in);
-    int height = scan1.nextInt();
-    System.out.println(" ");
+    String goodbye =
+        "================================================================================================================================"
+            + "\n================================================================================================================================"
+            + "\nThank you for running my program!"; // Saying Goodbye to the user, runs at the
+                                                     // bottom of main
 
-    System.out.println("What is your weight? Please answer in XXX.X");
-    Scanner scan2 = new Scanner(System.in);
-    double weight = scan2.nextDouble();
-    System.out.println(" ");
+    System.out.println(greeting);
+    System.out.print(skipLine); // skip line, looks nice easier to read the output terminal
 
-    System.out.println("How old are you?");
-    Scanner scan3 = new Scanner(System.in);
-    int age = scan3.nextInt();
-    System.out.println(" ");
+    Thread.sleep(6000); // I want the user to be able to read along with the terminal, it outputs so
+                        // fast
 
-    System.out.println(name + " " + height + " " + weight + " " + age);
-    System.out.println("Everything look good?");
-    System.out.println("Great lets get started!");
+    dataTypes dataPrintOut = new dataTypes(); // calls the dataTypes class I made
+    dataPrintOut.data();
+    System.out.print(skipLine);
 
-    System.out.println("What would you like to try today?");
-    System.out.println(" ");
-    System.out.println("Arm Workouts = 1");
-    System.out.println("Leg Workouts = 2");
-    System.out.println("Abdominal Workouts = 3");
-    System.out.println("Cardio Drills = 4");
-    System.out.println(" ");
-    System.out.println("Please type the number of");
-    System.out.println("the library you'd like to attempt.");
+    Thread.sleep(6000); // I want the user to be able to read along with the terminal, it outputs so
+                        // fast
 
-    Scanner scan4 = new Scanner(System.in);
-    int a = scan4.nextInt();
-    System.out.println("Great Choice! " + a);
+    wordDefinitions wordsPrintOut = new wordDefinitions(); // calls the wordDefinitions class I made
+    wordsPrintOut.words();
+    System.out.print(skipLine);
 
+    Thread.sleep(6000); // I want the user to be able to read along with the terminal, it outputs so
+    // fast
+
+    playingWithNumbers numbersPrintOut = new playingWithNumbers(); // calls the playingWithNumbers
+                                                                   // class I made
+    numbersPrintOut.numbers();
+    System.out.print(skipLine);
+
+    Thread.sleep(6000); // I want the user to be able to read along with the terminal, it outputs so
+    // fast
+
+    laundryDay laundryPrintOut = new laundryDay(); // calls the laundryDay class I made
+    laundryPrintOut.laundry();
+    System.out.print(skipLine);
+
+    Thread.sleep(6000); // I want the user to be able to read along with the terminal, it outputs so
+    // fast
+
+    loopDeeLoops loopsPrintOut = new loopDeeLoops(); // calls the loopDeeLoops class
+    loopsPrintOut.loops();
+    System.out.println(skipLine);
+
+    System.out.println(goodbye); // Ending print statement that shows the program is at the end
   }
+
 }
